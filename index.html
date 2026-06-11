@@ -1,95 +1,1062 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>-_-Розподіл розділів команди-_-</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <h1>-_- Розподіл командних розділів -_- </h1>
-    <div class="page-layout">
-      <section class="assignments">
-        <h2>Розподіл розділів</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Розділ 1</h3>
-            <p>96_ananas</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 2</h3>
-            <p>Arsenii Sydorovych</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 3</h3>
-            <p>Boris</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 4</h3>
-            <p>Good Jesus</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 5</h3>
-            <p>Lamer</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 6</h3>
-            <p>Maks Parhomenko</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 7</h3>
-            <p>Mary Smyrnova</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 8</h3>
-            <p>Olga Yakovleva</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 9</h3>
-            <p>Viktoria</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 10</h3>
-            <p>Валентина Кіренкова</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 11</h3>
-            <p>Віталій Караман</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 12</h3>
-            <p>Владислав Маковецкий</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 13</h3>
-            <p>Иван Пивовар</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 14</h3>
-            <p>Іван</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 15</h3>
-            <p>Ігор Мудряк</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 16</h3>
-            <p>Лєра</p>
-          </article>
-          <article class="card">
-            <h3>Розділ 17</h3>
-            <p>Михайло Мільчин</p>
-          </article>
-        </div>
-      </section>
+    <title>Зроби це зараз — Брайан Трейсі</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-      <aside class="video-panel">
-        <h2>Відосік</h2>
-        <div class="video-window">
-          <video src="./video/papuga.mp4" controls preload="metadata"></video>
-        </div>
-        <p class="video-caption">Коли на співбесіді просять показати, яку багатозадачність я мав на увазі у своєму резюме</p>
-      </aside>
+    <!-- Background Orbs -->
+    <div class="orbs">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="orb orb--3"></div>
+        <div class="orb orb--4"></div>
     </div>
-  </body>
+
+    <!-- Starfield -->
+    <canvas id="stars"></canvas>
+
+    <!-- Shooting Stars -->
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <!-- Falling Stars -->
+    <div class="falling-stars">
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+    </div>
+
+    <!-- Glow Dots -->
+    <div class="glow-dot"></div>
+    <div class="glow-dot"></div>
+    <div class="glow-dot"></div>
+    <div class="glow-dot"></div>
+    <div class="glow-dot"></div>
+
+    <!-- Easter Egg: Bouncing Frog -->
+    <div class="easter-frog" id="easterFrog">🐸</div>
+
+    <!-- Easter Egg: Dragon Egg -->
+    <div class="easter-dragon" id="easterDragon">🥚</div>
+
+    <!-- Easter Egg: Secret Eye -->
+    <div class="easter-eye" id="easterEye">👁️</div>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="hd-badge">Домашне Завдання створенно командою Group 02</div>
+            <h1 class="hd-title">
+                <span class="gld">Зроби це</span> зараз
+                <span class="hd-sub-title">Брайан Трейсі</span>
+            </h1>
+            <p class="hd-desc">21 розділ про продуктивність і самодисципліну &middot; <span id="chCount">0</span>/21 прочитано</p>
+            <div class="hd-progress">
+                <div class="hd-progress-track">
+                    <div class="hd-progress-fill" id="progressFill"></div>
+                </div>
+                <span class="hd-progress-pct" id="progressPct">0%</span>
+            </div>
+            <div class="hd-actions">
+                <button class="btn" id="expandAllBtn" aria-label="Розгорнути все">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg>
+                    <span>Розгорнути все</span>
+                </button>
+                <button class="btn btn-secondary" id="resetBtn" aria-label="Скинути прогрес">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                    <span>Скинути</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Accordion -->
+        <div class="accordion" id="accordion">
+
+            <!-- 1 - 96_ananas -->
+            <div class="acc-item" data-ch="1" data-contributor="96_ananas">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">01</span>
+                    <span class="acc-contributor">96_ananas</span>
+                    <span class="acc-title">Накрийте на стіл (встановлення цілей)</span>
+                    <span class="acc-status">
+                        <svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="acc-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Якість переможця: Для досягнення успіху першочерговою якістю є визначення чіткої мети — розуміння того, чого саме ви прагнете, та наявність палкого бажання цього досягти.</p>
+                        <p>Чіткість — основа продуктивності: Головна причина, чому одні люди встигають більше за інших, полягає в тому, що они мають абсолютно чіткі цілі та не відхиляються від них. Розмитість думок та невпевненість — основні чинники прокрастинації та браку мотивації.</p>
+                        <p>Правило успіху «Думайте на папері»: Лише 3% дорослих людей записують свої цілі на папері, але саме вони досягають у 5–10 разів більших результатів, ніж люди з аналогічною чи навіть вищою освітою, які цього не роблять. Незаписана мета — це лише фантазія, яка не має внутрішньої енергетики.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 - Лєра -->
+            <div class="acc-item" data-ch="2" data-contributor="Лєра">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">02</span>
+                    <span class="acc-contributor">Лєра</span>
+                    <span class="acc-title">Заздалегідь плануйте кожен день</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>«Планувати - це означає робити майбутнє теперішнім із можливістю діяти вже зараз.» — © Алан Лейкейн.<br/>Завдяки плануванню людина перетворює свої бажання на дії та наближає досягнення цілі.</p>
+                        <p>«Діяти непродумано - це перше джерело проблем.» — © Алек Маккензі<br/>Немає плану - чекай проблем.</p>
+                        <p>Правило шести П: Правильне попереднє планування перемагає погану продуктивність.<br/>Правило 10/90: Перші 10 % часу, витрачені на планування та організацію роботи перед початком, зроблять ефективнішими 90 % часу, потрібного власне на роботу.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 - Boris -->
+            <div class="acc-item" data-ch="3" data-contributor="Boris">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">03</span>
+                    <span class="acc-contributor">Boris</span>
+                    <span class="acc-title">Правило 80/20</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Цей розділ присвячений концепції того, що 20% вашої діяльності приносять 80% результатів. Брайан вважає, що головна причина низької продуктивності багатьох людей полягає в їхньому прагненні переробити безліч дрібних і не надто важливих справ, тоді як ключові завдання, здатні змінити ваше життя, можливо навіть на краще — хоча це не факт, — чекають свого часу.</p>
+                        <p>Головний меседж — учіться розставляти пріоритети. В ідеалі не лише розставляти, а й дотримуватися їх.</p>
+                        <p>Ключові думки розділу:</p>
+                        <p>Принцип Парето: 20% ваших завдань визначають 80% цінності вашої роботи.<br/>Прихована цінність: у списку з десяти завдань одне або два майже завжди вартують у 5–10 разів більше, ніж інші вісім разом узяті.<br/>Пастка зайнятості: багато людей працюють цілий день, але мало чого досягають, бо витрачають час на завдання з низькою віддачею, свідомо чи несвідомо уникаючи найскладніших і найважливіших справ.<br/>Небезпека дрібних справ: не піддавайтеся спокусі спершу «розібратися з дрібницями». Якщо ви звикнете починати день із малозначущих завдань, це стане стійкою звичкою, яка гальмуватиме ваш успіх.<br/>Мотивація через значущість: найцінніші завдання часто є найскладнішими, але їхнє успішне завершення дає потужний викид ендорфінів і енергію для подальшої роботи.<br/>Тайм-менеджмент як управління життям: учіться контролювати послідовність подій і робити усвідомлений вибір між важливим і другорядним.<br/>Дисципліна пріоритетів: ефективні люди змушують себе дотримуватися пріоритетів, що дозволяє їм досягати значно більшого, ніж середньостатистична людина.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 - Good Jesus -->
+            <div class="acc-item" data-ch="4" data-contributor="Good Jesus">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">04</span>
+                    <span class="acc-contributor">Good Jesus</span>
+                    <span class="acc-title">Думайте про наслідки</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Чітко прописати / візуалізувати бачення майбутньої цілі, постійно адаптуватися / аналізувати події що відбуваються зараз для якісного досягнення цілей в майбутньому</p>
+                        <p>Братися до виконання важливих завдань без жодних зволікань, не пеоенлсити їх на потім, від цього залежить життя в  довгостроковій перспективі</p>
+                        <p>З'їжте жабу: "Виставте важливі цілі на перший план"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 - Mary Smyrnova -->
+            <div class="acc-item" data-ch="5" data-contributor="Mary Smyrnova">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">05</span>
+                    <span class="acc-contributor">Mary Smyrnova</span>
+                    <span class="acc-title">Займайтесь творчою прокрастинацією</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Інсайт 1<br/>Зволікають усі. Різниця між ефективними і неефективними людьми полягає в тому, з виконанням чого вони зволікають.</p>
+                        <p>Інсайт 2<br/>Для того щоб розставити правильні пріоритети, слід визначити другорядні завдання також. Кажіть «ні» всьому, що не має великої цінності для вашого часу та життя.</p>
+                        <p>Інсайт 3<br/>Зволікайте свідомо - постійно переглядайте свої обов'язки і визначайте діяльність, що вимагає великих витрат часу і виконання якої ви можете пропустити без особливої шкоди для себе. Це має стати вашою звичкою.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 - Maks Parhomenko -->
+            <div class="acc-item" data-ch="6" data-contributor="Maks Parhomenko">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">06</span>
+                    <span class="acc-contributor">Maks Parhomenko</span>
+                    <span class="acc-title">Метод АБВГД</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Перший закон успіху – концентрація, а це означає спрямувати всю енергію до єдиної мети і йти до неї навпростець, не дивлячись ані праворуч, ані ліворуч. — © Вільям Метьюз</p>
+                        <p>Не можна відволікатись на пуголовка, якщо товста жаба сидить і чекає, поки ви її з'їсте - цей вислів означає що не можна відволікатись на другорядні задачі поки не виконана основна задача</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7 - Mary Smyrnova -->
+            <div class="acc-item" data-ch="7" data-contributor="Mary Smyrnova">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">07</span>
+                    <span class="acc-contributor">Mary Smyrnova</span>
+                    <span class="acc-title">Зосередьтесь на сферах ключових результатів</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>✅Ваш професійний ріст визначається не тим, наскільки багато ви працюєте, а тим, наскільки добре ви виконуєте свої найважливіші функції та чи працюєте над навичкою, яка найбільше стримує ваші результати.</p>
+                        <p>Інсайт 1. Слабка ланка визначає загальний результат<br/>Ми часто намагаємося ще більше розвивати свої сильні сторони, але найбільший приріст продуктивності часто дає пропрацювання саме найслабшого місця.</p>
+                        <p>Інсайт 2. Не все, що займає час, створює цінність<br/>Багато людей плутають зайнятість із результативністю. Потрібно чітко визначити свої ключові результативні сфери і витрачати основну частину часу саме на них.</p>
+                        <p>Інсайт 3. Відповідальність починається з ясності<br/>Люди часто працюють роками, не маючи чіткого розуміння, за що саме їх оцінюють. Перш ніж працювати більше, потрібно зрозуміти, які результати насправді є важливими.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8 - Olga Yakovleva -->
+            <div class="acc-item" data-ch="8" data-contributor="Olga Yakovleva">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">08</span>
+                    <span class="acc-contributor">Olga Yakovleva</span>
+                    <span class="acc-title">Закон трьох</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>«Робіть, що можете, з тим, що маєте, там, де ви є.»</p>
+                        <p>© Теодор Рузвельт<br/>Якщо коротко пояснити, то це означає, що треба зосереджуватися на можливостях, а не на обмеженнях.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9 - Viktoria -->
+            <div class="acc-item" data-ch="9" data-contributor="Viktoria">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">09</span>
+                    <span class="acc-contributor">Viktoria</span>
+                    <span class="acc-title">Ретельна підготовка</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Один із найкращих способів перемогти прокрастинацію, встигнути більше зробити за менший час – це ще до початку роботи мати під рукою все, що може знадобитись.</p>
+                        <p>Створіть зручне робоче місце<br/>Найбільш продуктивні люди відводять час на те, щоб створити робочу зону, де їм приємно перебувати. Що чистішим і затишнішим буде ваше робоче місце перед початком роботи, то легше вам буде почати й продовжувати.</p>
+                        <p>Починайте працювати<br/>Cкільки книжок так і не написано, скільки ступенів не отримано, виконання скількох доленосних завдань не розпочато лише через те, що люди не спромоглися вчасно зробити перший крок.</p>
+                        <p>Прямуйте до своєї мрії<br/>Найбільшими нашими ворогами на шляху до успіху є не відсутність умінь чи можливостей, а саме страх невдачі й відмови, а також сумніви, які вони породжують. Єдиним способом перебороти власний страх є «зробити те, чого боїтесь», і, за словами Емерсона, «будьте певні – страх помре».</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10 - Валентина Кіренкова -->
+            <div class="acc-item" data-ch="10" data-contributor="Валентина Кіренкова">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">10</span>
+                    <span class="acc-contributor">Валентина Кіренкова</span>
+                    <span class="acc-title">Один крок за раз</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>«Подорож на тисячу лі починається з одного кроку» — © Лао-цзи</p>
+                        <p>Перейти пустелю від бочки до бочки</p>
+                        <p>Робіть один крок за раз</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11 - Віталій Караман -->
+            <div class="acc-item" data-ch="11" data-contributor="Віталій Караман">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">11</span>
+                    <span class="acc-contributor">Віталій Караман</span>
+                    <span class="acc-title">Вдосконалюйте навички</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Розділ присвячений важливості постійного розвитку професійних навичок. Автор стверджує, що люди часто відкладають важливі справи через нестачу знань, досвіду або впевненості у власних силах. Чим вищий рівень компетентності, тим легше братися за складні завдання та виконувати їх якісно. Головний меседж — постійно вдосконалюйте ключові навички, адже саме вони допомагають підвищити продуктивність і зменшити схильність до прокрастинації.</p>
+                        <p>Ключові думки розділу:</p>
+                        <p>Компетентність долає прокрастинацію: невпевненість у власних знаннях часто стає причиною відкладання важливих справ.<br/>Навички потребують розвитку: знання швидко застарівають, тому навчання має бути безперервним.<br/>Будь-яку навичку можна опанувати: якщо інші люди навчилися чогось, то зможете і ви.<br/>Навчання підвищує ефективність: навіть невелике покращення навичок може значно вплинути на результати роботи.<br/>Три інструменти розвитку: читання профільної літератури, відвідування курсів і семінарів, прослуховування навчальних матеріалі<br/>Знання додають упевненості: що більше ви знаєте, то легше беретеся за складні завдання.<br/>Майстерність — це процес: найкращі результати досягають ті, хто систематично працює над власним розвитком.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12 - Владислав Маковецкий -->
+            <div class="acc-item" data-ch="12" data-contributor="Владислав Маковецкий">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">12</span>
+                    <span class="acc-contributor">Владислав Маковецкий</span>
+                    <span class="acc-title">Використовуйте свої особливі таланти</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Збільшить свою здатність заробляти: Ви можете втратити все, що мали: дім, машину, роботу і рахунок у банку - проте поки з вами є ваше вміння заробляти, ви можете повернути все і навіть отримати більше.</p>
+                        <p>Робіть те, що любите: Успішні люди - це незмінно ті, хто витратив час на визнання того, що вони роблять добре і, на додачу, що їм подобається.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13 - Иван Пивовар -->
+            <div class="acc-item" data-ch="13" data-contributor="Иван Пивовар">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">13</span>
+                    <span class="acc-contributor">Иван Пивовар</span>
+                    <span class="acc-title">Визначте перепони</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Брайан Трейсі вчить знаходити головну перепону, яка заважає досягненню мети. Це може бути нестача знань, ресурсів або інші труднощі. Автор радить визначити це «вузьке місце» і зосередити всі сили на його усуненні, адже саме так можна значно прискорити досягнення результатів.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 14 - Іван -->
+            <div class="acc-item" data-ch="14" data-contributor="Іван">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">14</span>
+                    <span class="acc-contributor">Іван</span>
+                    <span class="acc-title">Тисніть на себе</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Не чекати з моря погоди...<br/>Для досягнення бажаного результату в будь-якій справі, треба перш за все плідно працювати самому і не очікувати, що хтось буде тебе направляти або робити за тебе потрібні дії.</p>
+                        <p>Вимагай від себе більше...<br/>Сенс в тому, щоб спробувати робити звичайні повсякденні речі, але в більшому об'ємі, тим самим піднімати до себе вимоги та штовхати до більшого результату.</p>
+                        <p>Часу обмаль...<br/>Уявити, що від будь-якої дії, навіть незначної, залежить щось дуже важливе та термінове і тим самим штовхати себе робити дії швидше, але зважено та сплановано.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15 - Ігор Мудряк -->
+            <div class="acc-item" data-ch="15" data-contributor="Ігор Мудряк">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">15</span>
+                    <span class="acc-contributor">Ігор Мудряк</span>
+                    <span class="acc-title">Максимізуйте сили</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Підтримуйте високий рівень енергії<br/>Відпочивайте достатньо, не перевантажуйте себе роботою та дбайте про свій фізичний і емоційний стан.</p>
+                        <p>Працюйте у свій найпродуктивніший час<br/>Виконуйте найважливіші та найскладніші завдання тоді, коли маєте найбільше енергії та концентрації.</p>
+                        <p>Спіть достатньо та регулярно відпочивайте<br/>Лягайте спати раніше, беріть повноцінні вихідні та відпустки для відновлення сил і підвищення продуктивності.</p>
+                        <p>Дбайте про здоров'я<br/>Правильно харчуйтеся, уникайте шкідливої їжі та регулярно займайтеся фізичними вправами (близько 30 хвилин щодня).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 16 - Лєра -->
+            <div class="acc-item" data-ch="16" data-contributor="Лєра">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">16</span>
+                    <span class="acc-contributor">Лєра</span>
+                    <span class="acc-title">Мотивуйте себе діяти</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Мотивація виникає, коли людина прагне чогось нового(пригод), досягнень(перемог) і творчої реалізації.</p>
+                        <p>«Непереборна жага пригод, перемог та творчості - ось у чому людина знаходить найбільшу втіху.» — © Антуан де Сент-Екзюпері</p>
+                        <p>Навіть якщо людина не має впливу на обставини, влна завжди має вплив на своє ставлення до цих обставин.</p>
+                        <p>«Остання людська свобода - обирати власне ставлення до обставин, які їй дано.» — © Віктор Франкл</p>
+                        <p>«Оптимізму можна навчитись.» — © Мартін Селіґмен</p>
+                        <p>Тобто, оптимізм - це навичка, яку можна набути, а не вроджений дар.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 17 - Валентина Кіренкова -->
+            <div class="acc-item" data-ch="17" data-contributor="Валентина Кіренкова">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">17</span>
+                    <span class="acc-contributor">Валентина Кіренкова</span>
+                    <span class="acc-title">Позбудьтесь технологічного рабства</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Технології можуть бути друзями (покращити якість життя) чи ворогами (виснаживши психологічно).<br/>Відключення від різноманітних технологій і комунікаційних пристроїв щоб не потрапити в технологічну пастку.</p>
+                        <p>Поверніть свій час (завдяки правилу 80/20 де 80% інформації (листів, повідомлень…) – не важлива і на неї не варто витрачати час. І тільки 20% - опрацьовувати (з яких лише 4% - дійсно критично важливі).<br/>Стандартизуйте і передоручайте.</p>
+                        <p>Відмовтесь бути рабом. «Я усвідомив, що якщо хтось надсилає мені електронного листа, то це ще не означає, що він може володіти частинкою мого життя».<br/>Слуга, а не господар. Навчитись сприймати технологію як слугу, а не господаря.</p>
+                        <p>Постійне слідкування за новинами, повідомленнями та ін. не є життєво важливим. «Якщо це щось дійсно важливе, вам хтось про це розповість».</p>
+                        <p>З'їжте жабу! Вимкніть усі комунікаційні пристрої на годину зранку та годину по обіді. Щотижня беріть один повний вихідний без технологій, лише живе спілкування.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 18 - Валентина Кіренкова -->
+            <div class="acc-item" data-ch="18" data-contributor="Валентина Кіренкова">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">18</span>
+                    <span class="acc-contributor">Валентина Кіренкова</span>
+                    <span class="acc-title">Діліть завдання на частини</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Метод «шматочок салямі» - ділите роботу на частинки і виконувати один шматок за раз.</p>
+                        <p>Закінчувати роботу. Що більшу жабу ви з'їсте, то більший і яскравіший приплив енергії відчуєте.</p>
+                        <p>Техніка: «Швейцарський сир» - виконувати завдання 5-10 хв, потім відпочинок/ інша діяльність (пробивати дірки в завданні, наче в сирі)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 19 - Иван Пивовар -->
+            <div class="acc-item" data-ch="19" data-contributor="Иван Пивовар">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">19</span>
+                    <span class="acc-contributor">Иван Пивовар</span>
+                    <span class="acc-title">Великі блоки часу</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>У цьому розділі автор наголошує на важливості створення великих блоків часу для роботи. Він пояснює, що складні та важливі завдання потребують тривалої концентрації без відволікань. Плануючи такі проміжки часу та зосереджуючись на одному завданні, можна значно підвищити свою продуктивність і досягати кращих результатів.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 20 - Danylo Tykhonov -->
+            <div class="acc-item" data-ch="20" data-contributor="Danylo Tykhonov">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">20</span>
+                    <span class="acc-contributor">Danylo Tykhonov</span>
+                    <span class="acc-title">Відчуття терміновості</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Не відкладайте важливі справи. Починайте діяти одразу, не чекаючи ідеальних умов чи слушного моменту.</p>
+                        <p>Зосереджуйтесь на головних завданнях. Швидкий початок роботи та наполегливість допомагають досягати кращих результатів і бути продуктивнішими.</p>
+                        <p>Постійний рух створює успіх. Чим активніше ви працюєте над своїми цілями, тим більше досвіду, впевненості та мотивації отримуєте.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 21 - Boris -->
+            <div class="acc-item" data-ch="21" data-contributor="Boris">
+                <button class="acc-head" aria-expanded="false">
+                    <span class="acc-num">21</span>
+                    <span class="acc-contributor">Boris</span>
+                    <span class="acc-title">Виконуйте завдання по одному</span>
+                    <span class="acc-status"><svg class="acc-check" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span class="acc-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+                </button>
+                <div class="acc-body">
+                    <div class="acc-content">
+                        <p>Концентрація як секрет сили: Справжня сила полягає у вмінні мудро використовувати свої ресурси та концентрувати їх у певний момент у конкретній точці.</p>
+                        <p>Принцип 100% завершення: Необхідно вибрати найважливіше завдання, почати його і працювати зосереджено, не відволікаючись, до повного завершення. на 100%</p>
+                        <p>Значне скорочення часу: Якщо ви зосереджуєтеся виключно на одному найважливішому завданні, ви можете скоротити час на його виконання на 50%.</p>
+                        <p>Пастка переривань: Спроби припиняти роботу, а потім знову повертатися до неї, можуть збільшити загальний час виконання завдання майже на 500%, оскільки щоразу доводиться знову долати інерцію та шукати робочий ритм.</p>
+                        <p>Відносність втрати часу: Будь-яка інша діяльність у той час, коли ви маєте пріоритетне завдання, є відносною втратою часу, оскільки вона не є такою важливою.</p>
+                        <p>Роль самодисципліни: Самодисципліна — це здатність змусити себе робити те, що слід, і тоді, коли це необхідно, незалежно від того, хочете ви цього чи ні.</p>
+                        <p>Гартування характеру: Робота над пріоритетним завданням до кінця є перевіркою характеру, сили волі та рішучості. Це підвищує самооцінку та дає відчуття повного контролю над своєю долею.</p>
+                        <p>Практична порада розділу: Оберіть найважливіший проект і дисциплінуйте себе працювати над ним до повної готовності. Не зупиняйтеся, доки не завершите роботу, адже це найкраща перевірка вашої здатності досягати результатів</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="konami-toast" id="konamiToast">🎮 Konami код активовано! +100 до продуктивності!</div>
+
+        <div class="tip-toast" id="tipToast"></div>
+
+        <div class="footer-hidden" id="footerHidden">
+            🥷 Зроблено Group 02<br/>
+            Scrum Manager: Віталій Караман<br/>
+            <span style="color:#52525b;font-size:10px;">psst... Брайан схвалює</span>
+        </div>
+
+        <div class="pomodoro-toast" id="pomodoroToast">🍅 Ти тут вже 5 хв! Час перерви? Або з'їж жабу!</div>
+
+        <footer class="footer">
+            <span>Group 02 &bull; Scrum Manager: Віталій Караман</span>
+        </footer>
+    </div>
+
+    <script>
+        (function() {
+            // Stagger animation delay for accordion items
+            var accItems = document.querySelectorAll('.acc-item');
+            accItems.forEach(function(item, i) {
+                item.style.setProperty('--i', i);
+            });
+
+            // ========== STARS ==========
+            var c = document.getElementById('stars');
+            var ctx = c.getContext('2d');
+            var W, H, stars = [];
+
+            function resizeStars() {
+                W = c.width = window.innerWidth;
+                H = c.height = window.innerHeight;
+            }
+            resizeStars();
+
+            var COUNT = 180;
+            for (var i = 0; i < COUNT; i++) {
+                stars.push({
+                    x: Math.random() * W,
+                    y: Math.random() * H,
+                    r: Math.random() * 1.2 + 0.2,
+                    dx: (Math.random() - 0.5) * 0.05,
+                    dy: (Math.random() - 0.5) * 0.05
+                });
+            }
+
+            function drawStars() {
+                ctx.clearRect(0, 0, W, H);
+                for (var i = 0; i < stars.length; i++) {
+                    var s = stars[i];
+                    ctx.beginPath();
+                    ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255,255,255,0.35)';
+                    ctx.fill();
+                    s.x += s.dx;
+                    s.y += s.dy;
+                    if (s.x < 0) s.x = W;
+                    if (s.x > W) s.x = 0;
+                    if (s.y < 0) s.y = H;
+                    if (s.y > H) s.y = 0;
+                }
+                requestAnimationFrame(drawStars);
+            }
+            drawStars();
+
+            window.addEventListener('resize', resizeStars);
+
+            // ========== ACCORDION ==========
+            var heads = document.querySelectorAll('.acc-head');
+            var items = document.querySelectorAll('.acc-item');
+            var expandAllBtn = document.getElementById('expandAllBtn');
+            var resetBtn = document.getElementById('resetBtn');
+            var progressFill = document.getElementById('progressFill');
+            var progressPct = document.getElementById('progressPct');
+            var chCount = document.getElementById('chCount');
+
+            var STORAGE_KEY = 'bs_read_chapters';
+
+            function getRead() {
+                try {
+                    var v = localStorage.getItem(STORAGE_KEY);
+                    return v ? JSON.parse(v) : [];
+                } catch(e) { return []; }
+            }
+
+            function saveRead(arr) {
+                try { localStorage.setItem(STORAGE_KEY, JSON.stringify(arr)); } catch(e) {}
+            }
+
+            function updateProgress() {
+                var read = getRead();
+                var total = heads.length;
+                var done = read.length;
+                var pct = total > 0 ? Math.round((done / total) * 100) : 0;
+                progressFill.style.width = pct + '%';
+                progressPct.textContent = pct + '%';
+                chCount.textContent = done;
+
+                items.forEach(function(item) {
+                    var ch = item.getAttribute('data-ch');
+                    var isRead = read.indexOf(ch) !== -1;
+                    item.classList.toggle('is-read', isRead);
+                });
+            }
+
+            function toggleRead(ch) {
+                var read = getRead();
+                var idx = read.indexOf(ch);
+                if (idx === -1) {
+                    read.push(ch);
+                } else {
+                    read.splice(idx, 1);
+                }
+                saveRead(read);
+                updateProgress();
+            }
+
+            // Accordion toggle
+            heads.forEach(function(head) {
+                head.addEventListener('click', function(e) {
+                    var item = head.closest('.acc-item');
+                    var isOpen = head.getAttribute('aria-expanded') === 'true';
+
+                    // close others
+                    heads.forEach(function(h) {
+                        if (h !== head && h.getAttribute('aria-expanded') === 'true') {
+                            h.setAttribute('aria-expanded', 'false');
+                            h.closest('.acc-item').classList.remove('is-open');
+                        }
+                    });
+
+                    if (isOpen) {
+                        head.setAttribute('aria-expanded', 'false');
+                        item.classList.remove('is-open');
+                    } else {
+                        head.setAttribute('aria-expanded', 'true');
+                        item.classList.add('is-open');
+                    }
+                });
+
+                // Auto-scroll into view when opened
+                setTimeout(function() {
+                    if (head.getAttribute('aria-expanded') === 'true') {
+                        var rect = head.getBoundingClientRect();
+                        if (rect.top < 80 || rect.bottom > window.innerHeight) {
+                            head.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                    }
+                }, 50);
+
+                // Checkmark click toggles read status (doesn't open accordion)
+                var statusEl = head.querySelector('.acc-status');
+                if (statusEl) {
+                    statusEl.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        var item = head.closest('.acc-item');
+                        var ch = item.getAttribute('data-ch');
+                        toggleRead(ch);
+                    });
+                }
+            });
+
+            // Expand / collapse all
+            expandAllBtn.addEventListener('click', function() {
+                var allOpen = Array.from(heads).every(function(h) {
+                    return h.getAttribute('aria-expanded') === 'true';
+                });
+
+                heads.forEach(function(head) {
+                    var item = head.closest('.acc-item');
+                    if (allOpen) {
+                        head.setAttribute('aria-expanded', 'false');
+                        item.classList.remove('is-open');
+                        expandAllBtn.querySelector('span').textContent = 'Розгорнути все';
+                    } else {
+                        head.setAttribute('aria-expanded', 'true');
+                        item.classList.add('is-open');
+                        expandAllBtn.querySelector('span').textContent = 'Згорнути все';
+                    }
+                });
+            });
+
+            // Reset
+            resetBtn.addEventListener('click', function() {
+                saveRead([]);
+                updateProgress();
+
+                heads.forEach(function(head) {
+                    head.setAttribute('aria-expanded', 'false');
+                    head.closest('.acc-item').classList.remove('is-open');
+                });
+                expandAllBtn.querySelector('span').textContent = 'Розгорнути все';
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    heads.forEach(function(head) {
+                        head.setAttribute('aria-expanded', 'false');
+                        head.closest('.acc-item').classList.remove('is-open');
+                    });
+                    expandAllBtn.querySelector('span').textContent = 'Розгорнути все';
+                }
+            });
+
+            // === ORB PARALLAX ===
+            document.addEventListener('mousemove', function(e) {
+                var x = e.clientX / window.innerWidth;
+                var y = e.clientY / window.innerHeight;
+                var orbs = document.querySelectorAll('.orb');
+                orbs.forEach(function(orb, i) {
+                    var speed = (i + 1) * 8;
+                    var dx = (x - 0.5) * speed;
+                    var dy = (y - 0.5) * speed;
+                    orb.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
+                });
+            });
+
+            updateProgress();
+
+            // === CONFETTI ON 100% ===
+            function fireConfetti() {
+                var colors = ['#fbbf24', '#f59e0b', '#d97706', '#8b5cf6', '#60a5fa', '#34d399', '#f472b6'];
+                for (var i = 0; i < 60; i++) {
+                    (function() {
+                        var el = document.createElement('div');
+                        el.style.cssText = 'position:fixed;width:8px;height:8px;border-radius:2px;pointer-events:none;z-index:9999;opacity:1;';
+                        el.style.background = colors[Math.floor(Math.random() * colors.length)];
+                        el.style.left = (Math.random() * window.innerWidth) + 'px';
+                        el.style.top = (-10) + 'px';
+                        document.body.appendChild(el);
+                        var x = (Math.random() - 0.5) * 400;
+                        var y = 300 + Math.random() * 400;
+                        var rot = Math.random() * 720;
+                        var dur = 1.5 + Math.random() * 1.5;
+                        el.animate([
+                            { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                            { transform: 'translate(' + x + 'px, ' + y + 'px) rotate(' + rot + 'deg)', opacity: 0 }
+                        ], { duration: dur * 1000, easing: 'cubic-bezier(.25,.46,.45,.94)', fill: 'forwards' }).onfinish = function() {
+                            el.remove();
+                        };
+                    })();
+                }
+            }
+
+            var prevPct = 0;
+            var progressObserver = new MutationObserver(function() {
+                var curr = parseInt(progressPct.textContent);
+                if (curr === 100 && prevPct < 100) {
+                    fireConfetti();
+                }
+                prevPct = curr;
+            });
+            progressObserver.observe(progressPct, { childList: true, characterData: true, subtree: true });
+
+            // ===== EASTER EGG 1: Konami Code =====
+            (function() {
+                var keys = [];
+                var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+                document.addEventListener('keydown', function(e) {
+                    keys.push(e.keyCode);
+                    if (keys.length > code.length) keys.shift();
+                    if (keys.length === code.length && keys.every(function(k, i) { return k === code[i]; })) {
+                        var toast = document.getElementById('konamiToast');
+                        toast.classList.add('is-visible');
+                        fireConfetti();
+                        setTimeout(function() { toast.classList.remove('is-visible'); }, 3000);
+                        keys = [];
+                    }
+                });
+            })();
+
+            // ===== EASTER EGG 2: Bouncing Frog (DVD-style) =====
+            (function() {
+                var frog = document.getElementById('easterFrog');
+                var x = 60, y = 100;
+                var dx = 1.4, dy = 0.9;
+                var active = false;
+                var rafId = null;
+
+                function moveFrog() {
+                    if (!active) { rafId = null; return; }
+                    x += dx;
+                    y += dy;
+                    var s = 40;
+                    if (x <= 0 || x >= window.innerWidth - s) { dx = -dx; x = Math.max(0, Math.min(x, window.innerWidth - s)); }
+                    if (y <= 0 || y >= window.innerHeight - s) { dy = -dy; y = Math.max(0, Math.min(y, window.innerHeight - s)); }
+                    frog.style.left = x + 'px';
+                    frog.style.top = y + 'px';
+                    frog.style.transform = dx > 0 ? 'scaleX(1)' : 'scaleX(-1)';
+                    rafId = requestAnimationFrame(moveFrog);
+                }
+
+                function hideFrog() {
+                    active = false;
+                    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+                    frog.classList.remove('is-visible');
+                }
+
+                function showFrog() {
+                    hideFrog();
+                    x = 60 + Math.random() * 200;
+                    y = 100 + Math.random() * 100;
+                    frog.classList.add('is-visible');
+                    active = true;
+                    moveFrog();
+                    setTimeout(hideFrog, 12000);
+                }
+
+                document.addEventListener('click', function() { showFrog(); }, { once: true });
+                // Re-appear every 90s after first
+                document.addEventListener('click', function() {
+                    setInterval(function() {
+                        if (!active) showFrog();
+                    }, 90000);
+                }, { once: true });
+            })();
+
+            // ===== EASTER EGG 3: Click Counter =====
+            (function() {
+                var cnt = 0;
+                var fish = ['🐟', '🐠', '🐡', '🦈', '🐋'];
+                document.addEventListener('click', function(e) {
+                    cnt++;
+                    if (cnt % 5 === 0) {
+                        var el = document.createElement('div');
+                        el.className = 'click-fish';
+                        el.textContent = fish[Math.floor(Math.random() * fish.length)];
+                        el.style.left = (e.clientX - 20) + 'px';
+                        el.style.top = (e.clientY - 20) + 'px';
+                        document.body.appendChild(el);
+                        setTimeout(function() { el.remove(); }, 1500);
+                    }
+                });
+            })();
+
+            // ===== EASTER EGG 4: Dragon Egg (grows with progress) =====
+            (function() {
+                var el = document.getElementById('easterDragon');
+                var stages = ['🥚', '🐣', '🐉', '🐲', '🐉'];
+                var labels = ['яйце', 'вилуплюється...', 'дракон!', 'ВЕЛИКИЙ ДРАКОН!', 'ЛЕГЕНДАРНИЙ ДРАКОН!'];
+
+                function updateDragon() {
+                    var read = getRead();
+                    var total = heads.length;
+                    var pct = total > 0 ? (read.length / total) : 0;
+                    var stage = 0;
+                    if (pct >= 0.75) stage = 4;
+                    else if (pct >= 0.5) stage = 3;
+                    else if (pct >= 0.25) stage = 2;
+                    else if (pct > 0) stage = 1;
+
+                    el.textContent = stages[stage];
+
+                    var label = el.querySelector('span') || document.createElement('span');
+                    if (!label.parentNode) el.appendChild(label);
+                    var labelText = read.length + '/' + total + ' ' + labels[stage];
+                    // add fire emoji at 100%
+                    if (pct >= 1) labelText = '🔥 ' + labelText + ' 🔥';
+                    label.textContent = labelText;
+
+                    if (read.length > 0) {
+                        el.classList.add('is-visible');
+                    } else {
+                        el.classList.remove('is-visible');
+                    }
+                }
+
+                // Wrap setRead to also update dragon
+                var origSetRead = saveRead;
+                saveRead = function(arr) {
+                    origSetRead(arr);
+                    updateDragon();
+                };
+
+                updateDragon();
+                // Also update on any progress change
+                setInterval(updateDragon, 2000);
+            })();
+
+            // ===== EASTER EGG 5: Secret Eye follower + random tips =====
+            (function() {
+                var eye = document.getElementById('easterEye');
+                var tipToast = document.getElementById('tipToast');
+                var tips = [
+                    '🐸 З\'їж жабу зранку!',
+                    '📝 Правило 80/20: 20% справ = 80% результату',
+                    '⏰ 10/90: 10% планування економить 90% часу',
+                    '🎯 Думай на папері — записуй цілі',
+                    '🧠 Концентрація = сила: одну справу до кінця',
+                    '⚡ Відчуття терміновості — дій зараз!',
+                    '🛌 Спи 7-8 годин для продуктивності',
+                    '📖 Читай 30 хв щодня у своїй сфері',
+                    '🍅 Pomodoro: 25 хв роботи, 5 хв відпочинку',
+                    '🚫 Вимкни сповіщення під час роботи',
+                    '🏆 Найважче — почати. Зроби перший крок!',
+                    '🔁 Дисципліна важливіша за мотивацію',
+                    '🎯 Одна ціль — одна спрямованість',
+                    '🧘‍♂️ Медитація 10 хв = ясність думок',
+                    '📉 Не плутай зайнятість з продуктивністю',
+                    '🚀 Працюй над слабкою ланкою — вона тягне вниз',
+                    '🔄 Делегуй те, що не є твоєю силою',
+                    '✂️ Діли велике завдання на маленькі кроки',
+                    '💪 Самодисципліна — міст між цілями і результатами',
+                    '🌅 Перші 3 години дня — найцінніші',
+                    '📵 Цифровий детокс: годину без телефону',
+                    '🏃 Рух створює енергію — розімнися!',
+                    '🎵 Музика без слів для концентрації',
+                    '📋 Список із 3 головних справ на день',
+                    '💧 Пий воду — мозок потребує гідратації',
+                    '🌙 Не працюй пізно вночі — якість падає',
+                    '🪟 Провітрюй кімнату — кисень для мозку',
+                    '🎯 "Жаба" — найважливіше завдання дня',
+                    '📆 Плануй вечором — прокидайся готовим',
+                    '🧩 Складне завдання → прості частини',
+                    '🔇 Тиша — найкраще середовище для фокусу',
+                    '📈 Вимірюй прогрес — це мотивує',
+                    '🎉 Святкуй маленькі перемоги',
+                    '💡 Інсайт приходить під час відпочинку',
+                    '🔄 Не роби завтра те, що можна зробити сьогодні',
+                    '🧠 Навчання = інвестиція з найвищим ROI',
+                    '✍️ Веди щоденник успіхів',
+                    '👀 Дивись на довгострокові наслідки',
+                    '⚖️ Працюй розумніше, а не більше',
+                    '🏗️ Спочатку каркас, потім деталі',
+                    '🌊 Імпульс створюється дією',
+                    '🎪 Вийди із зони комфорту щодня',
+                    '🕰️ Час — єдиний невідновлюваний ресурс',
+                    '📚 1 година читання = 10 годин досвіду',
+                    '🎯 Чітка мета прибирає сумніви',
+                    '🛡️ Страх зникає, коли починаєш діяти',
+                    '🐸 Якщо треба з\'їсти 2 жаб — їж найбільшу',
+                    '🔑 Ключ до успіху — почати',
+                    '🌟 Ти — середнє арифметичне 5 людей навколо',
+                    '⚡ Енергія вранці = вечірні звички',
+                    '🎯 Правило 5 секунд: порахуй і дій',
+                    '🧹 Порядок на столі = порядок в голові',
+                    '🎭 Рольові моделі: знайди ментора',
+                    '💤 Короткий сон (20 хв) відновлює сили',
+                    '📊 Аналізуй помилки — це безцінний досвід',
+                ];
+
+                document.addEventListener('mousemove', function(e) {
+                    eye.style.left = (e.clientX + 15) + 'px';
+                    eye.style.top = (e.clientY + 15) + 'px';
+                });
+
+                setTimeout(function() {
+                    eye.classList.add('is-visible');
+                }, 10000);
+
+                setInterval(function() {
+                    tipToast.textContent = tips[Math.floor(Math.random() * tips.length)];
+                    tipToast.classList.add('is-visible');
+                    setTimeout(function() {
+                        tipToast.classList.remove('is-visible');
+                    }, 4000);
+                }, 25000);
+            })();
+
+            // ===== EASTER EGG 6: Triple-click title → golden rain =====
+            (function() {
+                var title = document.querySelector('.hd-title');
+                var clicks = 0;
+                var timer = null;
+                title.addEventListener('click', function(e) {
+                    clicks++;
+                    if (timer) clearTimeout(timer);
+                    timer = setTimeout(function() { clicks = 0; }, 600);
+                    if (clicks >= 3) {
+                        clicks = 0;
+                        // golden rain: smaller confetti only in gold
+                        var golds = ['#fbbf24', '#f59e0b', '#d97706', '#fde68a'];
+                        for (var i = 0; i < 40; i++) {
+                            (function() {
+                                var el = document.createElement('div');
+                                el.style.cssText = 'position:fixed;width:6px;height:6px;border-radius:2px;pointer-events:none;z-index:9999;';
+                                el.style.background = golds[Math.floor(Math.random() * golds.length)];
+                                el.style.left = (Math.random() * window.innerWidth) + 'px';
+                                el.style.top = (-10) + 'px';
+                                document.body.appendChild(el);
+                                var x = (Math.random() - 0.5) * 200;
+                                var y = 200 + Math.random() * 300;
+                                var rot = Math.random() * 360;
+                                el.animate([
+                                    { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                                    { transform: 'translate(' + x + 'px, ' + y + 'px) rotate(' + rot + 'deg)', opacity: 0 }
+                                ], { duration: 2000 + Math.random() * 1000, easing: 'cubic-bezier(.25,.46,.45,.94)', fill: 'forwards' }).onfinish = function() { el.remove(); };
+                            })();
+                        }
+                    }
+                });
+            })();
+
+            // ===== EASTER EGG 7: Footer click → hidden credits =====
+            (function() {
+                var footer = document.querySelector('.footer');
+                var hidden = document.getElementById('footerHidden');
+                footer.addEventListener('click', function() {
+                    hidden.classList.toggle('is-visible');
+                    setTimeout(function() { hidden.classList.remove('is-visible'); }, 4000);
+                });
+            })();
+
+            // ===== EASTER EGG 8: Text selection → sparkles =====
+            (function() {
+                document.addEventListener('mouseup', function(e) {
+                    var sel = window.getSelection().toString().trim();
+                    if (sel.length > 3 && sel.length < 100) {
+                        for (var i = 0; i < 12; i++) {
+                            (function() {
+                                var el = document.createElement('div');
+                                el.style.cssText = 'position:fixed;width:3px;height:3px;border-radius:50%;pointer-events:none;z-index:9999;';
+                                var colors = ['#fbbf24', '#8b5cf6', '#60a5fa', '#34d399', '#f472b6', '#fff'];
+                                el.style.background = colors[Math.floor(Math.random() * colors.length)];
+                                el.style.left = (e.clientX + (Math.random() - 0.5) * 60) + 'px';
+                                el.style.top = (e.clientY + (Math.random() - 0.5) * 60) + 'px';
+                                document.body.appendChild(el);
+                                el.animate([
+                                    { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+                                    { transform: 'translate(' + (Math.random() - 0.5) * 60 + 'px, ' + (-30 - Math.random() * 40) + 'px) scale(0)', opacity: 0 }
+                                ], { duration: 800, easing: 'ease-out', fill: 'forwards' }).onfinish = function() { el.remove(); };
+                            })();
+                        }
+                    }
+                });
+            })();
+
+            // ===== EASTER EGG 9: Pomodoro surprise (5 min on page) =====
+            (function() {
+                var pomToast = document.getElementById('pomodoroToast');
+                setTimeout(function() {
+                    pomToast.classList.add('is-visible');
+                    setTimeout(function() { pomToast.classList.remove('is-visible'); }, 5000);
+                }, 300000); // 5 min
+                // Also show if all chapters read
+                var origUpdate = updateProgress;
+                updateProgress = function() {
+                    origUpdate();
+                    var read = getRead();
+                    if (read.length === heads.length) {
+                        pomToast.textContent = '🔥 Всі розділи прочитано! Ти — справжній дракон продуктивності! 🔥';
+                        pomToast.classList.add('is-visible');
+                        setTimeout(function() { pomToast.classList.remove('is-visible'); }, 6000);
+                    }
+                };
+            })();
+
+            // === READING STREAK (consecutive days) ===
+            var streakKey = 'bs_streak';
+            var lastDateKey = 'bs_last_date';
+            try {
+                var today = new Date().toDateString();
+                var lastDate = localStorage.getItem(lastDateKey);
+                var streak = parseInt(localStorage.getItem(streakKey)) || 0;
+
+                if (lastDate !== today) {
+                    var yesterday = new Date(Date.now() - 86400000).toDateString();
+                    if (lastDate === yesterday) {
+                        streak++;
+                    } else if (lastDate !== null) {
+                        streak = 1;
+                    } else {
+                        streak = 1;
+                    }
+                    localStorage.setItem(streakKey, streak);
+                    localStorage.setItem(lastDateKey, today);
+                }
+            } catch(e) {}
+        })();
+    </script>
+</body>
 </html>
