@@ -825,6 +825,22 @@ body {
 .acc-check {
     color: #3f3f46;
     transition: all 0.3s ease;
+    animation: normal-blink 2.5s infinite ease-in-out;
+}
+
+.acc-check:hover {
+    color: #2563eb;
+    animation: hover-color-blink 1.5s infinite ease-in-out;
+}
+
+@keyframes normal-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes hover-color-blink {
+    0%, 100% { color: #2563eb; }
+    50% { color: #60a5fa; }
 }
 
 .acc-item.is-read .acc-check {
